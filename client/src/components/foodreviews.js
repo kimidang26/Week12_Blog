@@ -1,4 +1,4 @@
-import { useReducer , useEffect, useState} from "react";
+import { useEffect, useState} from "react";
 
 const Reviews = () => {
     const [foods, setFoods] = useState([]);  
@@ -19,18 +19,21 @@ const getReviews = async () => {
   
 
   return (
-    <div className="Food-Review-Page">
+    
+    <div className="Food-Review-Card-Deck">
         <h1>My Reviews</h1>
-            {foods.map((review) => {
+            {foods.map((review, index) => {
             
               return (
                 <div>
-                  <p>{review.id}</p>
-                  <p>{review.restaurant_name}</p>
-                  <p>{review.date}</p>
-                  <p>{review.location}</p>
-                  <p>{review.img}</p>
-                  <p>{review.student_id}</p>
+                    <div className="card-1">
+                        <div className="card-body">
+                            <p> {review.img}</p>
+                            <h5 className="card-title">{review.restaurant_name}</h5>
+                            <p className="card-text">{review.date}</p>
+                            <p className="card-text">{review.location}</p>
+                         </div>
+                    </div>
              </div>
               
               );
