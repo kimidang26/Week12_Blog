@@ -5,17 +5,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./components/home.js";
 import Reviews from './components/pages/foodreviews';
 import Footer from "./components/footer";
-import About from './components/pages/contact';
+import About from './components/pages/about';
 import Contact from './components/pages/contact';
-// import NavigationBar from './components/NavBar';
+import NavigationBar from './components/NavBar';
 
 
 const App = () => {
   return (
     <div className="App">
        <h1>Yummers</h1>
+       {/* <Home />
+       <Reviews/>
+       <About />
+       <Contact /> */}
        <Router>
-          {/* <NavigationBar /> */}
+          <NavigationBar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/reviews" element={<Reviews />} />
