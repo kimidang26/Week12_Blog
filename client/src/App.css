@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+/* .main-slide{
+   padding:30px;
+} */
+
+.carousel .thumb{
+  width:5%;
+  height: 50px ;
+
+}
+
+.footer {
+  background-color: #282c34;
+  color: white;
+}
