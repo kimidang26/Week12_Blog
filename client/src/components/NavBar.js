@@ -11,7 +11,7 @@ const NavigationBar = () => {
             <Link to="/"> Home Page</Link>
         <br></br>
         <br></br>
-            <Link to="/reviews"> Food Review</Link>
+            <Link to="/food"> Food Review</Link>
         <br></br>
         <br></br>
             <Link to="/about"> About</Link>
