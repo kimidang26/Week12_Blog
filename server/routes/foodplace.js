@@ -34,6 +34,31 @@ router.get('/', async (req, res) => {
   }
 });
 
-
+  // ***********************create the POST request (update)****************************
+  router.post('/', async (req, res) => {
+    const newBlog = {
+      // id: req.params.id,
+      img: req.body.img,
+      restaurant_name: req.body.restaurant_name,
+      date: req.body.date,
+      location: req.body.location,
+      review: req.body.review,
+      
+ 
+  
+    }
+    console.log([newBlog.id, newBlog.img, newBlog.restaurant_name, newBlog.date, newBlog.location, newBlog.review ]);
+    try {
+    const addBlog = await db.query(
+      'INSERT INTO reviews ( img, restaurant_name, date, location, review) VALUES($1, $2, $3, $4, $5) RETURNING *',
+      [ newBlog.img, newBlog.restaurant_name, newBlog.date , newBlog.location, newBlog.review ],
+    );
+    console.log(req.body);
+    res.send(addBlog);
+    } catch (e) {
+      console.log(e.message);
+      return res.status(400).json({ e });
+    }
+  });
 
 export default router;
