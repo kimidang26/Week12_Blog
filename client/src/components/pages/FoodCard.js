@@ -1,6 +1,7 @@
 import Reviews from "./foodreviews.js";
 import './FoodCard.css'
 
+
 const FoodCard = ({ setFoods }) => {
     return (
         <div className="card">

@@ -43,9 +43,6 @@ router.get('/', async (req, res) => {
       date: req.body.date,
       location: req.body.location,
       review: req.body.review,
-      
- 
-  
     }
     console.log([newBlog.id, newBlog.img, newBlog.restaurant_name, newBlog.date, newBlog.location, newBlog.review ]);
     try {
