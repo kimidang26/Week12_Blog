@@ -6,7 +6,7 @@ import bodyParser from "body-parser";
 
 //import routes from db but mockdata rn
 import foodRouter from "./routes/foodplace.js"
-// import db from './db/db-connection.js';
+
 
 const app = express();
 const PORT = 2026;
