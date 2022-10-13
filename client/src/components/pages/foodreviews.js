@@ -4,6 +4,8 @@ import FoodCard from "./FoodCard.js";
 const Reviews = () => {
     const [foods, setFoods] = useState([]);  
 
+    //for search bar
+    const [allReviews, setAllReviews] = useState([]);  
 
 //****************Fetches/Gets Contact Table***********/
 
@@ -12,15 +14,33 @@ useEffect(() => {
   fetch("http://localhost:2026/food")
     .then((response) => response.json())
     .then((data) => {
+      setAllReviews(data);
       setFoods(data);
     });
 }, []);
+
+
+// ************Filter Cards/Search*************
+
+const filterReview = event => {
+  console.log(event.target.value ); 
+  const value = event.target.value.toLowerCase(); 
+  const filteredReviews = allReviews.filter(
+    food => (`${food.restaurant_name}`
+    .toLowerCase()
+    .includes(value)
+    )
+  );
+
+  setFoods(filteredReviews)
+};
   
   
 
   return (
      <div className="Food-Review-Card-Deck">
         <h1>My Reviews</h1>
+          <input className="search-box" placeholder="search restaurant name" onInput = {filterReview}/>
           <div className="blog-cards">
             {foods.map((review,index) => {
               // need a return if you map 

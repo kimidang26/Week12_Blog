@@ -1,6 +1,12 @@
 .App {
   text-align: center;
   padding: 4rem;
+  
+}
+
+.App h1{
+  background-color: #282c34;
+  color:snow;
 }
 
 .blog-cards{
