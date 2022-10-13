@@ -6,6 +6,7 @@ import bodyParser from "body-parser";
 
 //import routes from db but mockdata rn
 import foodRouter from "./routes/foodplace.js"
+import contactRouter from "./routes/newcontact.js"
 
 
 const app = express();
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 app.use('/food', foodRouter);
+app.use('/contact', contactRouter);
 
 
 

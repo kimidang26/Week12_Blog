@@ -1,20 +1,69 @@
-import React from "react";
+import React, {useState} from "react";
+
 
 
 function Contact() {
+    const [values, setValues] = useState({
+        firstname: "",
+        email: "",
+    });
+
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleFirstName = (event) => {
+        setValues({...values, firstname: event.target.value})
+    }
+
+    const handleEmail = (event) => {
+        setValues({...values, email: event.target.value})
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSubmitted(true);
+        console.log(values);
+
+
+        fetch('http://localhost:2026/contact', {
+            method: 'POST',
+            headers: {"Content-Type" : "application/json"},
+            body: JSON.stringify(values)
+        }) .then((res)=> {
+            return res.json();
+        })
+    }
+        console.log(values);
     return (
-        <div className="about">
-
-            <div className="aboutBottom">
-                <h1>CONTACT PAGE</h1>
-                <p>Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                    Lorem ipsum may be used as a placeholder before the final copy is available.</p>
-                <p> Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                    Lorem ipsum may be used as a placeholder before the final copy is available.
-                </p>
-            </div>
-        </div>
-
+        <div className="form-container">
+            <h2>Subscribe to the Yummers Food Blog</h2>
+        <form className="register-form" onSubmit={handleSubmit}>
+        {submitted ? <div className = "sucess-message"> Success! Thank you for registering!</div> : null} 
+          <input
+            onChange = {handleFirstName}
+            value={values.firstname}
+            id="first-name"
+            class="form-field"
+            type="text" 
+            placeholder="First Name"
+            name="firstName"
+            required
+          />
+          
+          <input
+            onChange = {handleEmail}
+            value={values.email}
+            id="email"
+            class="form-field"
+            type="text" 
+            placeholder="email"
+            name="email"
+            required
+          />
+          <button className="form-field" type="submit">
+            Subscribe
+          </button>
+        </form>
+      </div>
 
     );
 }
