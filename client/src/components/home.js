@@ -12,15 +12,15 @@ const Home = () => {
     <section className="images-carousel">
         <Carousel className="main-slide">
                 <div>
-                    <img src={burntcrumbs} height= "400px" width="100px"/>
+                    <img src={burntcrumbs} height= "800px" width="100%"/>
                     
                 </div>
                 <div>
-                    <img src={seafood} height= "400px" width="100px" />
+                    <img src={seafood} height= "800px" width="100px" />
                  
                 </div>
                 <div>
-                    <img src={sushi} height= "400px" width="100px"/> 
+                    <img src={sushi} height= "800px" width="100px"/> 
                   
                 </div>
             </Carousel>

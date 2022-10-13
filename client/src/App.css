@@ -7,6 +7,7 @@
 .App h1{
   background-color: #282c34;
   color:snow;
+  width: 100%;
 }
 
 .blog-cards{
@@ -27,6 +28,7 @@
 
 .App-header {
   background-color: #282c34;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,6 +55,20 @@
    padding:30px;
 } */
 
+.navigation{
+  display: flex;
+  flex-direction: row;
+  float: right;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.navigation a{
+  padding-left:30px;
+  padding-right:30px;
+  color: white;
+}
+
 .carousel .thumb{
   width:5%;
   height: 50px ;
@@ -62,4 +78,11 @@
 .footer {
   background-color: #282c34;
   color: white;
+  width: 1500px;
+  height: 200px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }

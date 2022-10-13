@@ -10,10 +10,9 @@ function Footer() {
     <div className="footer">
       <div className="socialMedia">
         {/* <InstagramIcon />  */}
-        {/* <TwitterIcon /> 
-        <FacebookIcon />
-         <LinkedInIcon /> */}
+        <a href="https://twitter.com/intent/tweet?button_hashtag=food&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #food</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>        
       </div>
+      
       <p> &copy; 2022 Yummers.com</p>
     </div>
   );
