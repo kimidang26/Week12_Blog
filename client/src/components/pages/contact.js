@@ -37,7 +37,7 @@ function Contact() {
         <div className="form-container">
             <h2>Interested in subscribing to the Yummers Food Blog? </h2>
             <br></br>
-            <h6>Provide your email below! </h6>
+            <h3>Provide your email below! </h3>
             <br></br>
         <form className="register-form" onSubmit={handleSubmit}>
         {submitted ? <div className = "sucess-message"> Success! Thank you for registering!</div> : null} 
