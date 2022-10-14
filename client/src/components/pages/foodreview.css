@@ -14,3 +14,36 @@
     height: 500px;
     width: 400px;
 }
+
+.Food-Review-Card-Deck h1{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.AddBlog{
+    background-color: #282c34;
+    padding: 10px;
+    margin-left: 400px;
+    margin-bottom: 100px;
+    width: 50%;
+    border-radius: 24px;
+    color:white;
+    font: 40px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.AddBlog input{
+    padding: 10px;
+    width: 30%;
+    margin: 10px;
+    
+    
+}
+
+.AddBlog label{
+    font-size: 30px;
+    color: white;
+}
+
+input#editReview{
+    padding:100px;
+}

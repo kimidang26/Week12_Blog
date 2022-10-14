@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import "./contact.css";
 
 
 function Contact() {
@@ -28,14 +28,17 @@ function Contact() {
             method: 'POST',
             headers: {"Content-Type" : "application/json"},
             body: JSON.stringify(values)
-        }) .then((res)=> {
+        }).then((res)=> {
             return res.json();
         })
     }
         console.log(values);
     return (
         <div className="form-container">
-            <h2>Subscribe to the Yummers Food Blog</h2>
+            <h2>Interested in subscribing to the Yummers Food Blog? </h2>
+            <br></br>
+            <h6>Provide your email below! </h6>
+            <br></br>
         <form className="register-form" onSubmit={handleSubmit}>
         {submitted ? <div className = "sucess-message"> Success! Thank you for registering!</div> : null} 
           <input
