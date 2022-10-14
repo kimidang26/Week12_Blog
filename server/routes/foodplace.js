@@ -58,4 +58,43 @@ router.get('/', async (req, res) => {
     }
   });
 
+    // ***********************create the PUT request (EDIT)****************************
+
+  router.put('/:id', async (req, res) => {
+    const reviewId = req.params.id;
+    const editBlog ={
+      img: req.body.img,
+      restaurant_name: req.body.restaurant_name,
+      date: req.body.date,
+      location: req.body.location,
+      review: req.body.review,
+    }
+    console.log([editBlog.img,editBlog.restaurant_name,editBlog.date,editBlog.location,editBlog.review ])
+    try {
+      const revisedBlog = await db.query(
+        `UPDATE reviews SET img = $1, restaurant_name =$2 , date =$3, location =$4, review =$5 WHERE id = ${reviewId} RETURNING *`,
+        [ editBlog.img,editBlog.restaurant_name,editBlog.date,editBlog.location,editBlog.review ],
+      );
+      console.log(req.body);
+      console.log(revisedBlog)
+      res.json(revisedBlog);
+      } catch (e) {
+        console.log(e.message);
+        return res.status(400).json({ e });
+      }
+  });
+  
+  // **************Delete*************
+  router.delete('/:id', async (req, res) => {
+    // : acts as a placeholder
+    const blogId = req.params.id;
+    try {
+      await db.none('DELETE FROM reviews WHERE id=$1', [blogId]);
+      res.send({ status: 'success' });
+    } catch (e) {
+      return res.status(400).json({ e });
+    }
+  });
+
+
 export default router;

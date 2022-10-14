@@ -2,7 +2,8 @@ import Reviews from "./foodreviews.js";
 import './FoodCard.css'
 
 
-const FoodCard = ({ setFoods }) => {
+const FoodCard = ({ setFoods, editBlog, deleteBlog }) => {
+    // console.log(setFoods.id,"id-supriya")
     return (
         <div className="card">
             <div className="card_image"><img src={setFoods.img} alt={setFoods.id}/> </div>
@@ -16,7 +17,10 @@ const FoodCard = ({ setFoods }) => {
                         <br></br>
                         <div className="card_review"><b>Review:</b> {setFoods.review}</div>
                     </div>
+                <button onClick={() => editBlog(setFoods)}>Edit </button>
+                <button onClick={() => deleteBlog(setFoods.id)}>DELETE</button>
             </div>
+           
         </div>
     );
 };
