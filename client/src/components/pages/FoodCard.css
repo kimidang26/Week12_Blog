@@ -24,7 +24,7 @@
 
  .search-box{
     outline: none;
-    width: 100%;
+    width: 50%;
     border: 1px solid grey;
     font-size: 1rem;
     border-radius: .5rem ;

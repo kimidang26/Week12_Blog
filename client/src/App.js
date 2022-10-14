@@ -20,7 +20,6 @@ const App = () => {
        <Contact /> */}
        <Router>
           <NavigationBar />
-          <h1>Yummers Blog</h1>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/food" element={<Reviews />} />

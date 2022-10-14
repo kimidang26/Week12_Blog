@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  padding: 4rem;
+
   
 }
 
@@ -9,6 +9,16 @@
   color:snow;
   width: 100%;
 }
+
+.images-carousel p{
+  position: absolute;
+  bottom: 15rem;
+  margin: 0 2rem;
+  color: white;
+  font-size: 10rem ;
+  font-family: 'Pacifico', cursive;
+}
+
 
 .blog-cards{
   display: flex;
@@ -58,15 +68,27 @@
 .navigation{
   display: flex;
   flex-direction: row;
-  float: right;
+  float:none;
   text-align: center;
-  padding: 14px 16px;
+  padding: 24px 16px;
+  background-color: #282c34;
+
 }
+
+
 
 .navigation a{
   padding-left:30px;
   padding-right:30px;
   color: white;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 30px;
+}
+
+.main-slide{
+  background-color: #282c34;
 }
 
 .carousel .thumb{
@@ -75,14 +97,31 @@
 
 }
 
+
 .footer {
   background-color: #282c34;
   color: white;
-  width: 1500px;
   height: 200px;
   padding-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 40px;
   
+}
+
+.media-icons{
+  display: flex;
+  flex-direction: row;
+  float:none;
+  padding: 10px;
+}
+
+.twitter-icons{
+  padding: 20px;
+}
+
+.tiktok-icons{
+  padding: 20px;
 }

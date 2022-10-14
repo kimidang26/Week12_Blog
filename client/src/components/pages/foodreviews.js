@@ -1,6 +1,7 @@
 import { useReducer ,useEffect, useState} from "react";
 import FoodCard from "./FoodCard.js";
 import React from "react";
+import "./foodreview.css";
 
 //to add in a new food blog post
 const reducer = (state, action) =>{
@@ -122,8 +123,11 @@ const handleAddBlog = async (e) => {
 
   return (
      <div className="Food-Review-Card-Deck">
-        <h1>My Reviews</h1>
-          <input className="search-box" placeholder="search restaurant name" onInput = {filterReview}/>
+        <h1>Recent Posts</h1>
+          <div className="Search-filter">
+            <h6>Search by Restaurant Name</h6>
+            <input className="search-box" placeholder="search restaurant name" onInput = {filterReview}/>
+          </div>
           <div className="blog-cards">
             {foods.map((review,index) => {
               // need a return if you map 

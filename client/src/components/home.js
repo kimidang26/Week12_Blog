@@ -12,18 +12,16 @@ const Home = () => {
     <section className="images-carousel">
         <Carousel className="main-slide">
                 <div>
-                    <img src={burntcrumbs} height= "800px" width="100%"/>
-                    
+                    <img src={burntcrumbs} height= "850px" width="450px"/>
                 </div>
                 <div>
-                    <img src={seafood} height= "800px" width="100px" />
-                 
+                    <img src={seafood} height= "850px" width="450px" />
                 </div>
                 <div>
-                    <img src={sushi} height= "800px" width="100px"/> 
-                  
+                    <img src={sushi} height= "850px" width="450px"/> 
                 </div>
             </Carousel>
+            <p>Yummers Food Blog</p>
     </section>
   );
 }

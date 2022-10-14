@@ -1,16 +1,17 @@
 import React from "react";
-// import InstagramIcon from "@material-ui/icons/Instagram";
-// import TwitterIcon from "@material-ui/icons/Twitter";
-// import FacebookIcon from "@material-ui/icons/Facebook";
-// import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import {FaTwitterSquare} from "react-icons/fa";
+import {FaTiktok} from "react-icons/fa";
 
 
 function Footer() {
   return (
     <div className="footer">
       <div className="socialMedia">
-        {/* <InstagramIcon />  */}
-        <a href="https://twitter.com/intent/tweet?button_hashtag=food&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #food</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>        
+          <div className="media-icons">
+          <div className="twitter-icons"><FaTwitterSquare /></div>
+            <br></br>
+            <div className="tiktok-icons">< FaTiktok /></div>
+          </div>
       </div>
       
       <p> &copy; 2022 Yummers.com</p>

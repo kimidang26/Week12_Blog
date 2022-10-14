@@ -1,0 +1,16 @@
+.Search-filter{
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+}
+
+.Search-filter h6{
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.card_image img{
+    height: 500px;
+    width: 400px;
+}
