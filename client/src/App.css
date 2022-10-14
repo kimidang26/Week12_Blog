@@ -1,0 +1,118 @@
+.App {
+  text-align: center;
+  
+
+  
+}
+
+.App h1{
+  background-color: #282c34;
+  color:snow;
+  width: 100%;
+}
+
+.images-carousel p{
+  position: absolute;
+  bottom: 15rem;
+  margin: 0 2rem;
+  color: white;
+  font-size: 10rem ;
+  font-family: 'Pacifico', cursive;
+}
+
+
+.blog-cards{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* .main-slide{
+   padding:30px;
+} */
+
+.navigation{
+  display: flex;
+  flex-direction: row;
+  float:none;
+  text-align: center;
+  padding: 24px 16px;
+  background-color: #282c34;
+
+}
+
+
+
+.navigation a{
+  padding-left:30px;
+  padding-right:30px;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 30px;
+}
+
+
+.footer {
+  background-color: #282c34;
+  color: white;
+  height: 200px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 40px;
+  
+}
+
+.media-icons{
+  display: flex;
+  flex-direction: row;
+  float:none;
+  padding: 10px;
+}
+
+.twitter-icons{
+  padding: 20px;
+}
+
+.tiktok-icons{
+  padding: 20px;
+}
